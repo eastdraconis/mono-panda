@@ -1,0 +1,57 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": "./dist/index.js"
+    },
+    "./preset": {
+      "source": "./src/preset.ts",
+      "types": "./dist/preset.d.ts",
+      "import": {
+        "types": "./dist/preset.d.mts",
+        "default": "./dist/preset.mjs"
+      },
+      "require": "./dist/preset.js"
+    }
+  },
+  "scripts": {
+    "prepare": "pnpm panda codegen",
+    "build": "tsup",
+    "release": "pnpm panda prepare && pnpm build && pnpm publish",
+    "build-fast": "tsup --no-dts",
+    "dev": "pnpm build-fast --watch",
+    "fmt": "prettier --write ."
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@pandacss/dev": "^0.41.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "dependencies": {
+    "styled-system": "workspace:^",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "react": ">=18.3.1",
+    "react-dom": ">=18.3.1"
+  }
+}
