@@ -12,6 +12,7 @@ export default defineConfig({
   outExtension: "mjs",
 
   outdir: "../styled-system",
+
   importMap: {
     css: "styled-system/css",
     recipes: "styled-system/recipes",

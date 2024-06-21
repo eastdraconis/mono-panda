@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "design-system",
   "version": "1.0.0",
   "description": "",
   "types": "./dist/index.d.ts",
@@ -43,15 +43,15 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tsup": "^8.1.0",
+    "typescript": "^5"
   },
   "dependencies": {
-    "styled-system": "workspace:^",
-    "tsup": "^8.1.0",
-    "typescript": "^5.4.5"
+    "styled-system": "workspace:^"
   },
   "peerDependencies": {
-    "react": ">=18.3.1",
-    "react-dom": ">=18.3.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
