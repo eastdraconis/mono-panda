@@ -6,6 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <Button />
       <div>asdasd</div>
+      <div>123123</div>
     </main>
   );
 }
